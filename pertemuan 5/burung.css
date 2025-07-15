@@ -1,0 +1,233 @@
+
+
+body {
+    background-image: linear-gradient(to bottom, #E9BCB9, #F29F58, #AB4459, #441752, #1B1833);
+    font-family:'Times New Roman', Times, serif;
+    margin: auto 20px 100px 20px 30px;
+    padding: 50px;
+
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+}
+
+#header {
+    margin-top: 30px; /* Jarak di atas judul */
+    margin-bottom: px; /* Jarak di bawah judul */
+    text-align: center;
+}
+.header2 {
+    text-align: center;
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;        
+}
+
+/* Mengatur margin dan padding agar tidak ada ruang ekstra */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container untuk navigasi */
+  .ul {
+    background-image: linear-gradient(to bottom, #AB4459, #F29F58, #E9BCB9);
+    ;  /* Warna latar belakang navbar */
+    padding: 25px;
+    border-radius: 40px; /* Memberikan sudut yang membulat */
+    text-align: center;
+    font-family: "Arial";
+    margin-inline: 20%;
+    opacity: 10;
+    word-spacing: 100px;    
+  }
+  
+  /* Menghapus list style dan memberi margin antar elemen */
+  .ul ul {
+    list-style-type: none;
+  }
+  
+  /* Styling setiap list item */
+  .ul ul li {
+    display: inline-block; /* Menampilkan item secara horizontal */
+    margin-right: 20px; /* Jarak antar item */
+  }
+  
+  /* Styling link */
+  .ul ul li a {
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    color: white; /* Warna teks putih */
+    font-size: 1.2rem; /* Ukuran font */
+    padding: 8px 15px;
+    display: inline-block; /* Agar padding bekerja dengan baik */
+    border-radius: 4px; /* Sudut membulat */
+    transition: background-color 0.3s, color 0.3s; /* Efek transisi */
+  }
+  
+  /* Efek ketika hover */
+  .ul ul li a:hover {
+    background-color: #3498db; /* Warna latar belakang saat hover */
+    color: white; /* Warna teks tetap putih */
+  }
+  
+  /* Mengatur tampilan untuk responsif (tampilan mobile) */
+  @media (max-width: 768px) {
+    .ul ul li {
+      display: block; /* Tampilan list secara vertikal pada layar kecil */
+      margin-bottom: 10px; /* Jarak antar item */
+    }
+  }
+  
+
+#soekarno{
+    text-align: right;
+    color: #001E00;
+    font-style: italic;
+    font-size: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    position: relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar {
+    display: inline;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.gambar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gambar img {
+    width: 300px;
+    height:200px;
+    display: inline-block;
+    margin: auto 50px;
+    padding: 2%;
+    background-image: linear-gradient(to bottom, #AB4459, #F29F58);
+    border-radius: 50px;
+    opacity: 0.8;
+    border:#390012;
+}
+
+.isi {
+    text-align:center;
+
+}
+
+.dropcap {
+    font-size: 50px;
+    color: #001E00;
+}
+
+.koleksi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.koleksi img {
+    width: 250px;
+    height:250px;
+    border: 3px dotted #fbff00;
+    display: inline-block;
+    margin: auto 20px;
+    padding: 2%;
+    background-image: linear-gradient(to bottom, #AB4459, #441752, #1B1833);
+    opacity: 0.7;
+    border-radius: 50px;
+}
+
+.promo{
+    margin: auto;
+    width: 600px;
+    text-align: center;
+    color: #bbff00;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.promo h2{
+    color: #bbff00;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.promo h3{
+    background-image: linear-gradient(to bottom, #AB4459, #441752, #1B1833);  
+    border: 2px dotted #fbff00;
+    color: #bbff00;
+    border-radius: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
