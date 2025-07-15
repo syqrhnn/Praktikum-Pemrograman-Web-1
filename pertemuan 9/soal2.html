@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Kurs Lingkaran</title>
+</head>
+<body>
+
+    <!-- Rupiah ke Dollar -->
+    <h1>Konversi Rupiah ke Dollar</h1>
+
+    <!-- 
+    Prosuder :
+    1. Mmebuat input untuk rupiah
+    2. Tag p untuk menampung hasil
+    3. Deklarasi variabel rupiah untuk menampung nilai input
+    4. Hitung pembagian dari variabel rupiah dibagi 15.942
+    lalu simpan ke variabel hasil -->
+    
+    <label for="rupiah">Masukkan nilai rupiah :</label>
+    <input type="number" id="rupiah" onkeyup="Rupiah_ke_Dollar()">
+
+    <p>Hasil konversi rupiah ke dollar : <span id="hasil1"></span></p>
+
+    <!-- Dollar ke Rupiah -->
+    <h1>Konversi Dollar ke Rupiah</h1>
+    
+    <label for="dollar">Masukkan nilai dollar :</label>
+    <input type="number" id="dollar" onkeyup="Dollar_ke_Rupiah()">
+
+    <p>Hasil konversi dollar ke rupiah : <span id="hasil2"></span></p>
+
+
+    <!-- Java Script -->
+     <script>
+        function Rupiah_ke_Dollar() {
+            let rupiah = document.getElementById('rupiah').value;
+            let hasil1 = rupiah / 15942
+
+            document.getElementById('hasil1').innerHTML = hasil1.toFixed(2);
+        }
+
+        function Dollar_ke_Rupiah() {
+            let dollar = document.getElementById('dollar').value;
+            let hasil2 = dollar * 15942
+
+            document.getElementById('hasil2').innerHTML = hasil2;
+        }
+
+     </script>
+</body>
+</html>
