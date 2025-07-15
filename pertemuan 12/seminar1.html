@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Create Seminar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Create New Seminar</h1>
+
+    <form action="" method="post">
+        <fieldset>
+            <legend>Informasi Seminar</legend>
+
+            <label for="code">Kode</label>
+            <input type="text" name="code" id="code" required>
+
+            <label for="name">Nama Kegiatan</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="date">Tanggal Mulai</label>
+            <input type="date" name="date" id="date" required>
+
+            <label for="end_date">Tanggal Akhir</label>
+            <input type="date" name="end_date" id="end_date" required>
+
+            <label for="price">Biaya</label>
+            <input type="number" name="price" id="price" required>
+
+            <label for="place">Tempat</label>
+            <input type="text" name="place" id="place" required>
+
+            <label for="latitude">Latitude</label>
+            <input type="text" name="latitude" id="latitude" required>
+
+            <label for="longitude">Longitude</label>
+            <input type="text" name="longitude" id="longitude" required>
+
+            <label for="type">Jenis Kegiatan</label>
+            <select name="type" id="type" required>
+                <option value="seminar">Seminar</option>
+                <option value="workshop">Workshop</option>
+            </select>
+
+            <label for="pic">PIC</label>
+            <input type="text" name="pic" id="pic" required>
+
+            <label for="description">Deskripsi</label>
+            <textarea name="description" id="description" required></textarea>
+
+            <button type="submit">Simpan</button>
+        </fieldset>
+    </form>
+
+</body>
+</html>

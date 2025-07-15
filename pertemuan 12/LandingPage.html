@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Mewah adalah penginapan terbaik dengan fasilitas lengkap di berbagai lokasi.">
+    <title>Hotel Mewah - Penginapan Nyaman Anda</title>
+    <style>
+        /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.slide {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+}
+
+/* Branches Section */
+.branches {
+    padding: 50px 20px;
+}
+
+.branches h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.branch {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.branch h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+/* Promotions Section */
+.promotion {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.promotion table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.promotion th, .promotion td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.promotion th {
+    background-color: #333;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Hotel Mewah</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#branches">Cabang</a></li>
+                    <li><a href="#promotion">Promosi</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Image Slider -->
+    <section id="slider" class="slider">
+        <div class="slider-container">
+            <img src="hotel1.jpg" alt="Hotel Mewah" class="slide">
+            <img src="hotel2.jpg" alt="Hotel Mewah" class="slide">
+            <img src="hotel3.jpg" alt="Hotel Mewah" class="slide">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Hotel Mewah adalah jaringan hotel yang menyediakan kenyamanan dan layanan berkualitas tinggi di berbagai kota. Kami menawarkan kamar yang nyaman dengan harga yang bersaing dan layanan yang memuaskan.</p>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <h2>Cabang Kami</h2>
+            <div class="grid-container">
+                <div class="branch">
+                    <h3>Cabang Jakarta</h3>
+                    <p>Lokasi strategis di pusat kota Jakarta, dekat dengan pusat perbelanjaan dan restoran terkenal.</p>
+                </div>
+                <div class="branch">
+                    <h3>Cabang Bali</h3>
+                    <p>Penginapan mewah dengan pemandangan laut dan akses mudah ke pantai-pantai terbaik di Bali.</p>
+                </div>
+                <div class="branch">
+                    <h3>Cabang Yogyakarta</h3>
+                    <p>Terletak di pusat kota Yogyakarta, dekat dengan berbagai situs sejarah dan tempat wisata budaya.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotion" class="promotion">
+        <div class="container">
+            <h2>Promosi Terbaru</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Paket</th>
+                        <th>Harga</th>
+                        <th>Waktu</th>
+                        <th>Syarat & Ketentuan</th>
+                        <th>Deskripsi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paket Liburan Keluarga</td>
+                        <td>Rp 2.000.000</td>
+                        <td>01 Jan - 31 Mar</td>
+                        <td>Min 3 malam</td>
+                        <td>Liburan keluarga dengan fasilitas makan pagi dan tiket wisata.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Honeymoon</td>
+                        <td>Rp 3.500.000</td>
+                        <td>01 Feb - 30 Apr</td>
+                        <td>Min 4 malam</td>
+                        <td>Pengalaman romantis dengan layanan spesial di kamar suite.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Bisnis</td>
+                        <td>Rp 1.500.000</td>
+                        <td>01 Jan - 30 Jun</td>
+                        <td>Min 2 malam</td>
+                        <td>Paket untuk perjalanan bisnis lengkap dengan ruang rapat.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Liburan Musim Panas</td>
+                        <td>Rp 2.200.000</td>
+                        <td>01 Jun - 31 Agustus</td>
+                        <td>Min 3 malam</td>
+                        <td>Paket liburan musim panas dengan fasilitas kolam renang dan aktivitas outdoor.</td>
+                    </tr>
+                    <tr>
+                        <td>Paket Weekend Getaway</td>
+                        <td>Rp 1.800.000</td>
+                        <td>Jumat - Minggu</td>
+                        <td>Min 2 malam</td>
+                        <td>Paket untuk akhir pekan dengan akses penuh ke spa dan restoran hotel.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Kontak Kami</h2>
+            <form>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Pesan Anda" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Hotel Mewah. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
