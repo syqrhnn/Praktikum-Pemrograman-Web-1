@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header, article, aside, nav, footer {
+    padding: 1rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: 10vh;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+footer {
+    height: 10vh;
+    background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+aside {
+    background-color: #f8f8f8;
+    flex: 0 0 20vw;
+}
+
+nav {
+    background-color: #f5e2b4;
+    flex: 0 0 20vw;
+}
+
+article {
+    flex-grow: 1;
+    background-image: linear-gradient(#B0E0E6,#F6A6B2);
+}
