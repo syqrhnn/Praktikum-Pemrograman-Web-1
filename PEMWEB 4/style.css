@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat,400,500,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat" sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    padding: 1rem;
+    align-items: center;
+    margin: 0;
+}
+
+header ul h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: .1em .1em blue;
+    font-size:50px;
+    color: blueviolet;
+}
+
+header li {
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 25px;
+    margin-right: 120px;
+    
+}
+
+header li.logo {
+    margin-right: auto;
+    
+}
+
+header img.logo {
+    width: 130px;
+}
+
+body {
+    background-color: #585c68;
+    font-size: 14px;
+    line-height: 22px;
+    color: #555555;
+}
+
+.navigation {
+    margin: auto;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #070068;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+
+}
+
+.navigation .btnLogin-popup  {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 5px solid rgb(110, 28, 172);
+    outline: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 2em;
+    color: rgb(7, 10, 160);
+    font-weight: 500;
+    margin-right: 100px;
+    border-style: initial;
+    padding: 10px 20px;
+}
+
+.navigation .btnLogin-popup:hover {
+    background-image: url(image-background/biru-bg.jpg);
+    color: #ffffff;
+}
+
+/* Styling untuk box container */
+.link-box {
+    background-image: url(image-background/biru-bg.jpg); /* Warna latar belakang box */
+    border: 3px solid #ddd; /* Border abu-abu tipis */
+    border-radius: 10px; /* Sudut border membulat */
+    padding: 20px; /* Memberikan ruang di dalam box */
+    max-width: 400px; /* Lebar maksimal box */
+    margin: 20px auto; /* Menempatkan box di tengah halaman */
+    box-shadow: 0 4px 12px rgba(207, 0, 0, 0.1); /* Memberikan bayangan lembut */
+  }
+  
+  /* Judul di dalam box */
+  .link-box h2 {
+    font-size: 2em; /* Ukuran font untuk judul */
+    color: white; /* Warna teks judul */
+    margin-bottom: 50px; /* Memberikan jarak bawah */
+    text-align: center; /* Menyelaraskan judul ke tengah */
+    text-decoration: underline;
+  }
+  
+  /* Styling untuk daftar link */
+  .link-box ul {
+    list-style-type: none; /* Menghapus bullet point */
+    padding: 0; /* Menghapus padding default */
+    margin: 0; /* Menghapus margin default */
+  }
+  
+  /* Styling untuk item di dalam list */
+  .link-box ul li {
+    margin-bottom: 75px; /* Memberikan jarak antar item list */
+  }
+  
+  /* Styling untuk link */
+  .link-box a {
+    color: white; /* Warna teks biru untuk link */
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    font-size: 1.5em; /* Ukuran font link */
+    transition: color 0.3s ease; /* Transisi lembut untuk perubahan warna */
+  }
+  
+  /* Efek hover pada link */
+  .link-box a:hover {
+    color: blueviolet; /* Warna biru yang lebih gelap saat hover */
+    text-decoration: underline; /* Menambahkan garis bawah saat hover */
+  }
+  

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiculum Vitae</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Montserrat,400,500,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat" sans-serif;
+}
+
+body {
+    background-color: #585c68;
+    font-size: 14px;
+    line-height: 22px;
+    color: #555555;
+}
+
+.container {
+    width: 800px;
+    height: auto;
+    display: flex;
+    margin: 50px auto;
+}
+
+.container .box-left {
+    width: 280px;
+    background-color: #333e51;
+}
+
+.container .box-left .profile {
+    width: 100%;
+    height: 280px;
+    background-color: #7a1e1e;
+
+}
+.container .box-left .profile img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .box-left .content {
+    padding: 0 25px;
+}
+
+.container .resume-item {
+    padding: 25px 0;
+    border-bottom: 2px solid #333e515e;
+}
+
+.container .title {
+    margin-bottom: 20px;
+}
+
+.container .box-left .bold {
+    color: #fff;
+}
+
+.container .box-left .reguler {
+    color: #d9e1e4;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.container .box-left ul li {
+    display: flex;
+    margin-bottom: 10px; 
+    align-items: center;
+}
+
+.container .box-left ul li:last-child {
+    margin-bottom: 0;
+}
+
+.container .box-left ul li .icon {
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    color: #353e4e;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 16px;
+    position: relative;
+}
+
+.container .box-left ul li .data {
+    color: #d9e1e4;
+}
+
+.container .box-left .resume-skills ul li {
+    display: flex;
+    margin-bottom: 10px;
+    color: #d9e1e4;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .box-left .resume-skills ul li .skill-name {
+    width: 25%;
+}
+
+.container .box-left .resume-skills ul li .skill-progress {
+    width: 60%;
+    margin: 0 5px;
+    height: 5px;
+    background-color: #ff5c5c;
+    position: relative;
+}
+
+.container .box-left .resume-skills ul li .skill-progress span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color:#fff;
+}
+
+.container .box-left .resume-skills ul li .skill-parcent {
+    width: 15%;
+}
+
+.container .box-left .resume-social .semi-bold {
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.semi-bold {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* right design */
+
+.container .box-right {
+    width: 520px;
+    background-color: #fff;
+    padding: 25px;
+}
+
+.container .box-left .resume-item:last-child,
+.container .box-right .resume-item:last-child {
+     border-bottom: 0px;
+}
+
+.container .box-right .bold {
+    color: #333e51;
+}
+
+.container .box-right ul li {
+    position: relative;
+}
+
+.container .box-right ul li .data {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.container .box-right ul li .info {
+    margin-bottom: 20px;
+}
+
+.container .box-right ul li:last-child .info {
+    margin-bottom: 0;
+}
+
+.container .box-right .resume-work ul,
+.container .box-right .resume-education ul {
+    padding-left: 40px;
+    overflow: hidden;
+}
+
+.container .box-right .resume-work ul li::before,
+.container .box-right .resume-education ul li::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -25px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 2px solid #333e51;
+}
+
+.container .box-right .resume-work ul li::after,
+.container .box-right .resume-education ul li::after {
+    content: "";
+    position: absolute;
+    background-color: #333e51;
+    top: 14px;
+    left: -21px;
+    width: 2px;
+    height: 115px;
+}
+
+.container .icon i,
+.container .box-right .resume-hobby ul li i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .box-right .resume-hobby ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .box-right .resume-hobby ul li {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #333e51;
+    border-radius: 50%;
+    position: relative;
+    color: #333e51;
+}
+
+.container .box-right .resume-hobby ul li i {
+    font-size: 30px;
+}
+
+.container .box-right .resume-hobby ul li::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: -52px;
+    width: 50px;
+    background-color: #333e51;
+    height: 2px;
+}
+
+.container .resume-hobby ul li:last-child::before {
+    display: none;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="box-left">
+            <div class="profile">
+                <img src="image-logo/profile.png" alt="profile">
+            </div>
+            <div class="content">
+                <!-- profile -->
+                <div class="resume-item">
+                    <div class="title">
+                        <p class="bold">Ahmad Syauqi Raihan</p>
+                        <p class="reguler">Sistem Informasi</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-map-signs"></i>
+                            </div>
+                            <div class="data">
+                                Depok,<br />Indonesia
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="data">
+                                +62 85947370503
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="data">
+                                syqrhnn@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <div class="data">
+                                www.rehan77.com
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- skills -->
+                <div class="resume-item resume-skills">
+                    <div class="title">
+                        <p class="bold">Skill's</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="skill-name">
+                                CSS
+                            </div>
+                            <div class="skill-progress">
+                                <span style="width: 75%;"></span>
+                            </div>
+                            <div class="skill-parcent">75%</div>
+                        </li>
+                        <li>
+                            <div class="skill-name">
+                                HTML
+                            </div>
+                            <div class="skill-progress">
+                                <span style="width: 82%;"></span>
+                            </div>
+                            <div class="skill-parcent">80%</div>
+                        </li>
+                        <li>
+                            <div class="skill-name">
+                                C#
+                            </div>
+                            <div class="skill-progress">
+                                <span style="width: 60%;"></span>
+                            </div>
+                            <div class="skill-parcent">60%</div>
+                        </li>
+                        <li>
+                            <div class="skill-name">
+                                C++
+                            </div>
+                            <div class="skill-progress">
+                                <span style="width: 70%;"></span>
+                            </div>
+                            <div class="skill-parcent">65%</div>
+                        </li>
+                        <li>
+                            <div class="skill-name">
+                                PHYTON
+                            </div>
+                            <div class="skill-progress">
+                                <span style="width: 78%;"></span>
+                            </div>
+                            <div class="skill-parcent">80%</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- social media -->
+                 <div class="resume-item resume-social">
+                    <div class="title">
+                        <p class="bold">social</p>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold">instagram</p>
+                                <p>syqrhnn_</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold">whatsapp</p>
+                                <p>+62 85905034737</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-youtube-square"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold">youtube</p>
+                                <p>Hanss Gaming</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                            <div class="data">
+                                <p class="semi-bold">linkedin</p>
+                                <p>Ahmad Syauqi Raihan</p>
+                            </div>
+                        </li>
+
+                    </ul>
+                 </div>
+
+            </div>
+
+        </div>
+
+        <div class="box-right">
+            <!-- about us -->
+            <div class="resume-item">
+                <div class="title">
+                    <p class="bold">About us</p>
+                </div>
+                <p>
+                    Saya Ahmad Syauqi Raihan, lulusan SMK Negeri 2 depok tahun 2024 jurusan Teknik Instalasi Tenaga Listrik.
+                    Lulus dengan nilai memuaskan, pernah memiliki pengalaman PKL sebagai Engineering di Hotel Aston Priority Simatuoang.
+                </p>
+            </div>
+            <!-- work experience -->
+            <div class="resume-item resume-work">
+                <div class="title">
+                    <p class="bold">work experience</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">Januari 2023 - Juni 2023</div>
+                        <div class="info">
+                            <p class="semi-bold">Hotel Aston Priority Simatupang</p>
+                            <p>Training Engineering Bersertifikat.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">Juni 2024</div>
+                        <div class="info">
+                            <p class="semi-bold">Membuat Instalasi penerangan dirumah saya sendiri.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">September 2024 - Oktober 2024</div>
+                        <div class="info">
+                            <p class="semi-bold">Belajar membuat WEB.</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- education -->
+            <div class="resume-item resume-education">
+                <div class="title">
+                    <p class="bold">Education</p>
+                </div>
+                <ul>
+                    <li>
+                        <div class="date">20012-2018</div>
+                        <div class="info">
+                            <p class="semi-bold">SDN Rangkapan Jaya Baru</p>
+                            <p>Taruna Pramuka</p>
+                            <p>Juara 1 lomba futsal antar SD.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2018-2021</div>
+                        <div class="info">
+                            <p class="semi-bold">SMP Negeri 20 Depok</p>
+                            <p>Osis SMPN 20 Depok</p>
+                            <p>Juara 1 lomba futsal antar Sekolah.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="date">2021-2024</div>
+                        <div class="info">
+                            <p class="semi-bold">SMK Negeri 2 Depok</p>
+                            <p>Pelatihan Enginnering.</p>
+                            <p>PKL di hotel Aston Priority Simatupang</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- hobby -->
+            <div class="resume-item resume-hobby">
+                <div class="title">
+                    <p class="bold">hobby</p>
+                </div>
+                <ul>
+                    <li><i class="fa fa-book"></i></li>
+                    <li><i class="fa fa-gamepad"></i></li>
+                    <li><i class="fa fa-music"></i></li>
+                    <li><i class="fa fa-futbol-o"></i></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
