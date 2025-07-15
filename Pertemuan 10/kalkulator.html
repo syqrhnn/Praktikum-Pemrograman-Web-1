@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+</head>
+<body>
+    <h1>Kalkulator Sederhana</h1>
+    <label for="bil1">Bilangan 1</label>
+    <input type="number" name="bil1" id="bil1">
+    <br>
+    <br>
+    <label for="bil2">Bilangan 2</label>
+    <input type="number" name="bil2" id="bil2">
+    <br>
+    <br>
+    <label for="">Pilih Bilangan Operasi Aritmatika :</label>
+    <select name="operasi" id="operasi">
+        <option value="">Silahkan pilih</option>
+        <option value="tambah">+</option>
+        <option value="kurang">-</option>
+        <option value="kali">*</option>
+        <option value="bagi">/</option>
+    </select><br><br>
+
+    <button id="hitung" onclick="Kalkulator()">Hitung</button>
+    <P>hasil perhitungan: <span id="hasil">0</span></P>
+    <script>
+        function Kalkulator() {
+            let bil1 = parseInt(document.getElementById('bil1').value)
+            let bil2 = parseInt(document.getElementById('bil2').value)
+            let operasi = document.getElementById('operasi').value;
+            console.log(bil1, bil2, operasi);
+            switch (operasi) {
+                case "tambah":
+                    hasil = bil1 + bil2
+                    break;
+                case "kurang":
+                    hasil = bil1 - bil2
+                    break;
+                case "kali":
+                    hasil = bil1 * bil2
+                    break;
+                case "bagi":
+                    hasil = bil1 / bil2
+                    break;
+                default:
+                    break;
+            }
+            document.getElementById('hasil').innerHTML = hasil
+        }
+    </script>
+</body>
+</html>

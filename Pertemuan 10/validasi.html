@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Validasi Tiket</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        fieldset {
+            border: none;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        legend {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        td {
+            padding: 8px 15px;
+        }
+
+        input[type="text"], input[type="email"], input[type="time"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus, input[type="time"]:focus, input[type="number"]:focus, select:focus {
+            border: 1px solid #007bff;
+            outline: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 12px;
+        }
+
+        .valid {
+            border: 2px solid green;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        #hasil {
+            font-weight: bold;
+            color: #28a745;
+        }
+
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend>Formulir Pemesanan Tiket</legend>
+        <form id="TiketForm">
+            <table>
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="nama" maxlength="30" required></td>
+                    <td><span id="errorNama" class="error"></span></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td>
+                    <td><input type="email" id="email" required></td>
+                    <td><span id="errorEmail" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="jam">Jam Keberangkatan</label></td>
+                    <td>:</td>
+                    <td><input type="time" id="jam" required></td>
+                    <td><span id="errorJam" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="tujuan">Tujuan Keberangkatan</label></td>
+                    <td>:</td>
+                    <td>
+                        <select id="tujuan" required>
+                            <option value="">Pilih Tujuan</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value="singapure">Singapore</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="zimbabwe">Zimbabwe</option>
+                            <option value="arab saudi">Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td><span id="errorTujuan" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="harga">Harga Tiket</label></td></td>
+                    <td>:</td>
+                    <td><input type="number" id="harga" disabled></td>
+                    <td><span id="errorHarga" class="error"></span></td>
+                </tr>
+                <tr>
+                    <td><label for="tiket">Jumlah Tiket</label></td>
+                    <td>:</td>
+                    <td><input type="number" id="tiket" min="1" max="10" required></td>
+                    <td><span id="errorTiket" class="error"></span></td>
+                </tr>
+            </table>
+        </form>
+        
+        <button type="button" onclick="validateForm()">Kirim</button>
+        <br><br>
+        <p>Data Pemesan: <span id="hasil"></span></p>
+    </fieldset>
+
+    <script>
+        function validateForm() {
+            let nama = document.getElementById("nama").value;
+            let email = document.getElementById("email").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let tiket = document.getElementById("tiket").value;
+
+            // Reset semua error
+            document.getElementById("errorNama").textContent = "";
+            document.getElementById("errorEmail").textContent = "";
+            document.getElementById("errorJam").textContent = "";
+            document.getElementById("errorTujuan").textContent = "";
+            document.getElementById("errorTiket").textContent = "";
+
+            let valid = true;
+
+            // Validasi Nama
+            if (nama.length === 0 || nama.length > 30) {
+                document.getElementById("errorNama").textContent = "Nama harus diisi dan maksimal 30 karakter.";
+                valid = false;
+            }
+
+            // Validasi Email
+            if (!email.includes("@")) {
+                document.getElementById("errorEmail").textContent = "Email tidak valid.";
+                valid = false;
+            }
+
+            // Validasi Jam
+            if (jam === "") {
+                document.getElementById("errorJam").textContent = "Jam keberangkatan harus diisi.";
+                valid = false;
+            }
+
+            // Validasi Tujuan
+            if (tujuan === "") {
+                document.getElementById("errorTujuan").textContent = "Tujuan harus dipilih.";
+                valid = false;
+            }
+
+            // Validasi Jumlah Tiket
+            if (tiket < 1 || tiket > 10) {
+                document.getElementById("errorTiket").textContent = "Jumlah tiket harus antara 1 dan 10.";
+                valid = false;
+            }
+
+            // Jika semua validasi berhasil
+            if (valid) {
+                document.getElementById("hasil").innerHTML = 
+                    "<p><strong>Nama:</strong> " + nama + "</p>" +
+                    "<p><strong>Email:</strong> " + email + "</p>" +
+                    "<p><strong>Jam Keberangkatan:</strong> " + jam + "</p>" +
+                    "<p><strong>Tujuan:</strong> " + tujuan + "</p>" +
+                    "<p><strong>Jumlah Tiket:</strong> " + tiket + "</p>";
+                    "<p><strong>Harga:</strong> " + harga + "</p>";
+            }
+
+            // Menghitung harga tiket berdasarkan tujuan dan jam keberangkatan
+            let harga = 0;
+            switch (tujuan) {
+                case "malaysia":
+                    harga = 10000;
+                    break;
+                case "singapure":
+                    harga = 15000;
+                    break;
+                case "argentina":
+                    harga = 20000;
+                    break;
+                case "zimbabwe":
+                    harga = 25000;
+                    break;
+                case "arab saudi":
+                    harga = 30000;
+                    break;
+                default:
+                    break;
+            }
+
+            // Menampilkan harga tiket
+            document.getElementById("harga").value = harga;
+        }
+    </script>
+</body>
+</html>
